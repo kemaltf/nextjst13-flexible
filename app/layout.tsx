@@ -1,3 +1,4 @@
+import './globals.css';
 export const metadata = {
   title: 'Flexibble',
   description: 'Showcase and discover remarable developer projects',
