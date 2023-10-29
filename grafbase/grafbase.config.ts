@@ -1,5 +1,7 @@
+// g is a schema generator, config the final object to return
 import { g, auth, config } from '@grafbase/sdk';
 
+// models can be generated with the `model` method
 const User = g.model('User', {
   name: g.string().length({ min: 2, max: 20 }),
   email: g.string().unique(),
@@ -22,6 +24,7 @@ const Project = g.model('Project', {
   category: g.string().search(),
   createdBy: g.relation(() => User),
 });
+
 export default config({
   schema: g,
 });
